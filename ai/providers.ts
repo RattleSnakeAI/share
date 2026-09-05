@@ -1195,15 +1195,7 @@ const NVIDIA_AGENT_MODEL_SLUG = "nvidia/nemotron-3-ultra-550b-a55b";
 const nvidiaModel = (
   or: OpenRouterInstance,
   modelSlug = NVIDIA_AGENT_MODEL_SLUG,
-) =>
-  or(modelSlug, {
-    extraBody: {
-      provider: {
-        only: ["nvidia"],
-        allow_fallbacks: false,
-      },
-    },
-  });
+) => or(modelSlug);
 
 export const KIMI_K3_SLUG = "moonshotai/kimi-k3";
 export const GLM_5_2_SLUG = "z-ai/glm-5.2";
